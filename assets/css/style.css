@@ -64,6 +64,10 @@ font-weight: 400;
         & i{
             font-size: 2em;
         }
+        p{
+            text-align: center;
+            font-weight: 200;
+        }
     }
     }
 .divider{
