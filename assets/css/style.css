@@ -114,14 +114,20 @@ h2 {
   margin: 0.5rem 0.2rem;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.322);
   padding-bottom: 2rem;
-  transform-style: preserve-3d;
-  transition: all 0.5s linear;
+  transition: all 600ms ease;
+
+  transform: rotateX(40deg) scale(0.7);
+  box-shadow: 0px 20px 50px -10px #000;
+  /* transform-style: preserve-3d;
+  transition: all 0.5s linear; */
   .logo {
     width: 20vw;
   }
 }
 .card:hover {
-  transform: rotateY(360deg);
+  /* transform: rotateY(360deg); */
+  cursor: pointer;
+  transform: rotateX(0deg) scale(1) translateY(10px);
 }
 .nueva-coleccion {
   text-align: center;
@@ -391,7 +397,7 @@ h2 {
   .header {
     .texto-header {
       width: 100vw;
-      font-size: large;
+      font-size: xx-large;
     }
   }
   .card-img-joyas {
