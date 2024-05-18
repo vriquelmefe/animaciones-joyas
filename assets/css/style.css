@@ -174,15 +174,18 @@ h2 {
   text-align: center;
   .collar-flo-uno img {
     z-index: 99;
-    width: 120px;
+    width: 30%;
     position: absolute;
-    margin-top: 5rem;
+    margin-top: 7rem;
+    margin-left: 50px;
+    border-radius: 4px;
   }
   .collar-flo-dos {
     padding: 3rem;
     img {
-      width: 220px;
-      height: 200px;
+      width: 80%;
+      height: 80%;
+      border-radius: 4px;
     }
   }
   .descri-promo {
@@ -309,6 +312,7 @@ h2 {
   .derechos-footer {
     background-color: #eae0d5;
     padding: 1rem;
+    text-align: center;
     p {
       font-weight: 300;
       font-size: 0.8em;
@@ -346,7 +350,7 @@ h2 {
       img {
         width: 25vw;
         height: 25vh;
-        margin-top: 30vh;
+        margin-top: 13vh;
         margin-left: 10vw;
         padding-bottom: 1rem;
         border-radius: 4px;
@@ -415,6 +419,21 @@ h2 {
     .en-oferta {
       .card-img-joyas {
         grid-template-columns: auto auto;
+      }
+    }
+  }
+  .promo-collar-florencia {
+    .collar-flo-dos img {
+      width: 80%;
+    }
+    .collar-flo-uno {
+      img {
+        width: 20%;
+        height: 20%;
+        margin-top: 19vh;
+        margin-left: 5vw;
+        padding-bottom: 1rem;
+        border-radius: 4px;
       }
     }
   }
