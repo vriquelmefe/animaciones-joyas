@@ -20,6 +20,9 @@ h2 {
   align-content: center;
   justify-content: space-around;
 }
+.links-nav {
+  display: none;
+}
 .header {
   background-image: url(../img/banner.png);
   background-repeat: no-repeat;
@@ -54,6 +57,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 20px;
   .info {
     display: flex;
     flex-direction: column;
@@ -92,6 +96,8 @@ h2 {
   justify-items: center;
   align-items: center;
   align-content: center;
+  position: relative;
+  perspective: 1000px;
 }
 .card {
   height: 27vh;
@@ -103,9 +109,14 @@ h2 {
   margin: 0.5rem 0.2rem;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.322);
   padding-bottom: 2rem;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  .logo {
+    width: 20vw;
+  }
 }
 .card:hover {
-  transform: scale(1.1);
+  transform: rotateY(360deg);
 }
 .nueva-coleccion {
   text-align: center;
@@ -113,12 +124,20 @@ h2 {
     padding: 2rem;
     font-weight: 400;
   }
+  .card {
+    .logo {
+      width: 15vw;
+      height: 16vh;
+    }
+  }
 }
 .precio-carrito {
   display: flex;
-  padding-left: 1rem;
+  padding-left: rem;
   padding-top: 0.2rem;
   font-weight: 300;
+  align-items: center;
+  justify-content: center;
   h6 {
     padding-right: 0.5rem;
     font-weight: 500;
@@ -141,6 +160,7 @@ h2 {
   margin-top: 1.5rem;
   background-color: #ac8455;
   padding: 1rem 0rem;
+  text-align: center;
   .collar-flo-uno img {
     z-index: 99;
     width: 120px;
@@ -154,52 +174,265 @@ h2 {
       height: 200px;
     }
   }
-  .descri-promo{
-    h2{
+  .descri-promo {
+    h2 {
       font-weight: 400;
-      padding-bottom: .5rem;
+      padding-bottom: 0.5rem;
     }
-    p{
+    p {
       font-weight: 300;
     }
-    h3{
+    h3 {
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
-    .btn-descri-flo{
+    .btn-descri-flo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      .btn-ver-mas{
-        padding: .7rem 2rem;
+      justify-content: space-around;
+      .btn-ver-mas {
+        padding: 0.7rem 2rem;
         text-transform: uppercase;
         border-radius: 5px;
-        border: 2px solid #AC8455;
+        border: 2px solid #ac8455;
         font-weight: 500;
-        font-size: .7em;
+        font-size: 0.7em;
         background-color: #fff;
         text-wrap: nowrap;
       }
-      .btn-agregar{
-        padding: .6rem 2rem;
+      .btn-agregar {
+        padding: 0.6rem 2rem;
         text-transform: uppercase;
         border-radius: 5px;
         border: 2px solid #fff;
         font-weight: 500;
-        font-size: .7em;
-        background-color:  #AC8455;
+        font-size: 0.7em;
+        background-color: #ac8455;
         color: #fff;
       }
     }
   }
 }
-.en-oferta{
+.en-oferta {
   text-align: center;
   padding-bottom: 2rem;
-  h2{
+  h2 {
     padding: 1.5rem;
   }
-  .precio-carrito{
+  .logo {
+    width: 15vw;
+    height: 10vh;
+  }
+  span {
+    text-decoration-line: line-through;
+    font-size: 0.7em;
+  }
+  .precio-carrito {
     display: flex;
+  }
+}
+.contacto {
+  background-color: #eae0d5;
+  padding: 2rem 0rem;
+  h2,
+  p {
+    text-align: center;
+  }
+  h2 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 0.7em;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  .form-contacto {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    input,
+    textarea {
+      width: 100%;
+      background-color: #eae0d5;
+      border: 1px solid black;
+      border-radius: 3px;
+      margin-bottom: 0.3rem;
+      padding: 0.5rem 0.7rem;
+      margin-top: 0.5rem;
+    }
+    button {
+      color: white;
+      background-color: #ac8455;
+      padding: 0.7rem 2.3rem;
+      border-radius: 3px;
+      border: none;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+  }
+}
+.footer {
+  .logo {
+    width: 50vw;
+    padding: 1.5rem 0rem;
+  }
+  .descri-footer {
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 1.2rem;
+  }
+  .info-contacto {
+    h4 {
+      font-weight: 500;
+      padding: 1.5rem 0rem;
+    }
+    .redes {
+      display: flex;
+      padding: 1.5rem 0rem;
+      i {
+        padding-right: 0.8rem;
+      }
+    }
+  }
+  .derechos-footer {
+    background-color: #eae0d5;
+    padding: 1rem;
+    p {
+      font-weight: 300;
+      font-size: 0.8em;
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .card-joyas {
+    margin-top: 1.5rem;
+    .variedad-metal {
+      padding-bottom: 0rem;
+    }
+    .card-img-joyas {
+      .logo {
+        width: 15vw;
+      }
+    }
+  }
+  .nueva-coleccion {
+    .card {
+      .logo {
+        width: 15vw;
+      }
+    }
+  }
+  .promo-collar-florencia {
+    text-align: center;
+    .collar-flo-dos {
+      img {
+        width: 60vw;
+        border-radius: 4px;
+      }
+    }
+    .collar-flo-uno {
+      img {
+        width: 25vw;
+        height: 25vh;
+        margin-top: 30vh;
+        margin-left: 10vw;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+      }
+    }
+    .descri-promo {
+      .btn-descri-flo {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  .en-oferta {
+    .logo {
+      width: 12vw;
+    }
+    span {
+      font-size: 0.7em;
+      text-decoration-line: line-through;
+    }
+  }
+}
+@media (min-width: 769px) {
+  .navegacion {
+    padding: 0rem 2rem;
+    justify-content: space-between;
+    .hamburguesa {
+      display: none;
+    }
+    .links-nav {
+      display: flex;
+      & ul {
+        display: flex;
+        gap: 1rem;
+        align-content: flex-end;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+      }
+      & li {
+        list-style: none;
+        font-size: 0.6em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .header {
+    .texto-header {
+      width: 100vw;
+      font-size: large;
+    }
+  }
+  .card-img-joyas {
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 1rem;
+    .card {
+      .logo {
+        width: 12vw;
+      }
+    }
+  }
+  .promos {
+    display: grid;
+    grid-template-columns: auto auto;
+    .en-oferta {
+      .card-img-joyas {
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+  .contacto {
+    .form-contacto {
+      display: grid;
+      grid-template-columns: auto auto;
+      input {
+        width: 90%;
+      }
+      .textarea {
+        width: 90%;
+      }
+      button {
+        height: 95%;
+      }
+    }
+  }
+  .footer-des {
+    display: grid;
+    grid-template-columns: 70% 20%;
+    .logo {
+      width: 30vw;
+    }
+    p {
+      width: 80%;
+    }
+  }
+  .derechos-footer {
+    margin-top: 1rem;
+    text-align: center;
   }
 }
